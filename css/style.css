@@ -47,20 +47,19 @@
 .right-side {
   width: 65%;
   height: 100%;
-  background-color: green;
+  background-image: url(../img/mine.jpg);
   float: left;
 }
 
 /* LEFT SIDE PROFILE SECTION  */
 .my-profile {
   height: 60px;
-  background-color: yellow;
   display: flex;
   justify-content: space-between;
   background-color: #EAEAEA;
 }
 
-.my-profile img {
+.my-profile img{
   width: 10%;
   border-radius: 50%;
   margin: 8px;
@@ -132,7 +131,7 @@
 /* LEFT SIDE LIST FRIENDS SECTION  */
 .list-friends {
   overflow-y: scroll;
-  height: calc(100vh - 190px );
+  height: calc(100vh - 193px );
 }
 .friend {
   display: flex;
@@ -159,4 +158,98 @@
 }
 .friend:active {
   background-color: #E9EBEB;
+}
+
+ /* RIGHT SIDE OF THE APP  */
+ /* HEADER */
+ .friend-chat{
+   display: flex;
+   width:87%;
+
+ }
+
+ .friend-chat img {
+   width: 6%;
+   border-radius: 50%;
+   height: 70%;
+   margin: 10px;
+ }
+ .friend-chat p {
+   color:black;
+   margin-top: 15px;
+   font-size: 14px;
+   font-weight: bold;
+ }
+
+ .friend-chat span {
+  font-size: 10px;
+  font-weight: bold;
+ }
+header {
+  display: flex;
+  background-color: #EAEAEA;
+  height: 60px;
+}
+.input-chat i {
+  margin: 8px;
+  line-height: 40px;
+}
+
+/* MAIN */
+main {
+  width: 100%;
+  height: 79vh;
+  overflow-y: scroll;
+}
+.bubble {
+  width: 100%;
+  height: 50px;
+}
+.first {
+  margin-top: 30px;
+}
+.b-green, .b-white {
+  background-color: #D5F9BA;
+  text-align: right;
+  float: right;
+  padding: 10px 25px 8px 10px;
+  border-radius: 8px;
+  color: black;
+  font-size: 12px;
+  margin-right: 70px;
+}
+.b-white {
+  background-color: white;
+  float: left;
+  margin-left: 70px;
+}
+
+main .time {
+  margin-top: 5px;
+  margin-right: -20px;
+  font-size: 8px;
+}
+/* FOOTER */
+footer {
+  width: 100%;
+  height: 60px;
+  background-color: #F3EEEA;
+  display: flex;
+}
+footer input {
+  width: 80%;
+  height: 85%;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+footer i {
+  width: 10%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+  color: #6B7376;
+}
+footer input::placeholder {
+  padding:15px;
 }
