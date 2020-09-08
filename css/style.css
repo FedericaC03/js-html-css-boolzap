@@ -1,3 +1,101 @@
-body {
-  background-color: red;
+/* MIX  */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
 }
+
+.clear::after {
+  position: absolute;
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.background-grey {
+  height: 100vh;
+  width: 100%;
+  background-color: #DBDBD2;
+  position: relative;
+}
+
+.background-blue {
+  position: absolute;
+  background-color: #009688;
+  width: 100%;
+  height: 110px;
+}
+
+.container {
+  height: 95vh;
+  width: 80%;
+  position: fixed;
+  z-index: 2;
+  top: 20px;
+  left: 150px;
+}
+
+.left-side {
+  width: 35%;
+  height: 100%;
+  background-color: blue;
+  float: left;
+}
+
+.right-side {
+  width: 65%;
+  height: 100%;
+  background-color: green;
+  float: left;
+}
+
+/* LEFT SIDE PROFILE SECTION  */
+.my-profile {
+  height: 60px;
+  background-color: yellow;
+  display: flex;
+  justify-content: space-between;
+  background-color: #EAEAEA;
+}
+
+.my-profile img {
+  width: 10%;
+  border-radius: 50%;
+  margin: 8px;
+}
+
+.icons {
+ font-size: 18px;
+ line-height: 60px;
+}
+
+.icons i {
+  margin-right: 20px;
+  color: #B1B1B1;
+}
+
+/* LEFT SIDE NOTIFICATIONS SECTION  */
+.notifications {
+  background-color: #8EDAFC;
+  height: 60px;
+}
+.notifications i {
+  background-color: #F2FBFF;
+  color: #8EDAFC;
+  float: left;
+  font-size: 15px;
+  padding: 13px;
+  border-radius: 100%;
+  margin: 10px;
+}
+.notifications p {
+  float: left;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+.notifications p a {
+  color: #6597AE;
+}
+/* LEFT SIDE NEW CHAT SECTION  */
