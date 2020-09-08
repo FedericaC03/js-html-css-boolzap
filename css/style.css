@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   font-family: sans-serif;
+  color: #B0B0B0; /*GREY*/
 }
 
 .clear::after {
@@ -39,7 +40,7 @@
 .left-side {
   width: 35%;
   height: 100%;
-  background-color: blue;
+  background-color: white;
   float: left;
 }
 
@@ -94,8 +95,68 @@
   font-size: 12px;
   font-weight: bold;
   margin-top: 15px;
+  color: black;
 }
 .notifications p a {
   color: #6597AE;
+  font-size: 11px;
 }
 /* LEFT SIDE NEW CHAT SECTION  */
+.new-chat {
+  background-color: white;
+  height: 35px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.new-chat input {
+  width: 80%;
+  height: 27px;
+  margin-top: 3px;
+  margin-left: 35px;
+  border: none;
+}
+
+.new-chat i {
+  vertical-align: middle;
+  line-height: 35px;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+::placeholder {
+  font-size: 12px;
+}
+
+/* LEFT SIDE LIST FRIENDS SECTION  */
+.list-friends {
+  overflow-y: scroll;
+  height: calc(100vh - 190px );
+}
+.friend {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.avatar {
+  width: 12%;
+  border-radius: 50%;
+  margin: 5px 15px;
+}
+
+.friend p {
+  vertical-align: middle;
+  margin-top: 15px;
+  color: black;
+  font-weight: bold;
+  font-size: 13px;
+}
+.friend p span {
+  font-size: 10px;
+}
+.friend:active {
+  background-color: #E9EBEB;
+}
