@@ -217,6 +217,7 @@ main {
   color: black;
   font-size: 12px;
   margin-right: 70px;
+  
 }
 .b-white {
   background-color: white;
@@ -252,4 +253,9 @@ footer i {
 }
 footer input::placeholder {
   padding:15px;
+}
+
+
+.none {
+  display: none;
 }
