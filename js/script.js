@@ -25,8 +25,6 @@ $(document).ready(function() {
     }
   );
 
-//AFTER MY MESSAGE, THE CPU WILL ANSWER WITH OK AFTER 1 SECOND
-
 });
 
 //FUNCTION SEND MESSAGE
@@ -35,28 +33,22 @@ var inputValue = $("#send").val();
 if (inputValue != "") {
  var newMessage = $(".template .clone").clone();
 
-
-
   newMessage.children(".b-green").prepend(inputValue);
   newMessage.find(".b-green .time").text(time);
   $(".chat").append(newMessage);
   $("#send").val("");
  }
-
 }
 
-
-//FUNCTION ANSWER
+//FUNCTION ANSWER ( THE CPU WILL ANSWER WITH OK AFTER 1 SECOND )
 function answer() {
   setTimeout(function(){
     var answer = $(".template-answer .clone").clone();
     answer.children(".b-white").prepend("ok");
     answer.find(".b-white .time").text(time);
     $(".chat").append(answer);
-
   }, 1000);
 }
-
 
 //FUNCTION GET TIME
 var date = new Date();
@@ -68,3 +60,12 @@ if (minutes < 10) {
 } else {
   var time = hours + ":" + minutes;
 }
+
+//FUNCTION FILTERS
+
+  $("#search").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#my-friends friend").filter(function() {
+      $(this).find("#friend").toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
