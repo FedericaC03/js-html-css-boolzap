@@ -43,7 +43,7 @@
     <!-- MY FRIENDS -->
     <section class="list-friends">
        <div class="friend active">
-         <div class="prova">
+         <div class="container-friend">
          <img class="avatar " src="img/avatar_1.jpg" alt="avatar">
          <p>Michele <br> <span>Non poteva essere altrimenti</span> </p>
          </div>
@@ -51,7 +51,7 @@
        </div>
 
        <div class="friend active">
-         <div class="prova">
+         <div class="container-friend">
          <img class="avatar " src="img/avatar_2.jpg" alt="avatar">
          <p>Francesco <br> <span>Non poteva essere altrimenti</span> </p>
          </div>
@@ -59,7 +59,7 @@
        </div>
 
        <div class="friend active">
-         <div class="prova">
+         <div class="container-friend">
          <img class="avatar " src="img/avatar_3.jpg" alt="avatar">
          <p>Cristian<br> <span>Non poteva essere altrimenti</span> </p>
          </div>
@@ -67,7 +67,7 @@
        </div>
 
        <div class="friend active">
-         <div class="prova">
+         <div class="container-friend">
          <img class="avatar " src="img/avatar_4.jpg" alt="avatar">
          <p>Alessandro B. <br> <span>Non poteva essere altrimenti</span> </p>
          </div>
@@ -75,7 +75,7 @@
        </div>
 
        <div class="friend active">
-         <div class="prova">
+         <div class="container-friend">
          <img class="avatar " src="img/avatar_5.jpg" alt="avatar">
          <p>Fabio <br> <span>Non poteva essere altrimenti</span> </p>
          </div>
@@ -83,7 +83,7 @@
        </div>
 
        <div class="friend active">
-         <div class="prova">
+         <div class="container-friend">
          <img class="avatar " src="img/avatar_6.jpg" alt="avatar">
          <p>Claudia <br> <span>Non poteva essere altrimenti</span> </p>
          </div>
@@ -91,7 +91,7 @@
        </div>
 
        <div class="friend active">
-         <div class="prova">
+         <div class="container-friend">
          <img class="avatar " src="img/avatar_7.jpg" alt="avatar">
          <p>Alessandro <br> <span>Non poteva essere altrimenti</span> </p>
          </div>
@@ -99,7 +99,7 @@
        </div>
 
        <div class="friend active">
-         <div class="prova">
+         <div class="container-friend">
          <img class="avatar " src="img/avatar_8.jpg" alt="avatar">
          <p>Federico <br> <span>Non poteva essere altrimenti</span> </p>
          </div>
@@ -107,7 +107,7 @@
        </div>
 
        <div class="friend active">
-         <div class="prova">
+         <div class="container-friend">
          <img class="avatar " src="img/avatar_6.jpg" alt="avatar">
          <p>Polly <br> <span>Non poteva essere altrimenti</span> </p>
          </div>
@@ -115,7 +115,7 @@
        </div>
 
        <div class="friend active">
-         <div class="prova">
+         <div class="container-friend">
          <img class="avatar " src="img/avatar_6.jpg" alt="avatar">
          <p>Federica <br> <span>Non poteva essere altrimenti</span> </p>
          </div>
@@ -139,7 +139,8 @@
       </div>
     </header>
     <!-- MAIN -->
-    <main>
+    <main class="chat">
+
        <div class="bubble first clear">
          <div class="b-green">Ciao come stai?
            <div class="time">14.30</div>
@@ -158,25 +159,27 @@
          </div>
        </div>
 
-       <div class="bubble none  ">
-         <div class="b-green clone ">
-           <div class="time">14.30</div>
-         </div>
-       </div>
+
     </main>
     <!-- FOOTER -->
     <footer>
       <i class="far fa-smile"></i>
       <input id="send" type="text" name="" value="" placeholder="Scrivi un messaggio">
-      <i class="fas fa-microphone"></i>
+      <i id="microphone" class="fas fa-microphone "></i>
+      <i id="paper-plane" class="fas fa-paper-plane"></i>
     </footer>
   </div>
 
 </div>
 
-
-
-
+    <!-- TEMPLATE -->
+    <div class="template">
+        <div class="bubble clone">
+          <div class="b-green">
+            <div class="time"></div>
+          </div>
+        </div>
+    </div>
 
 
 
