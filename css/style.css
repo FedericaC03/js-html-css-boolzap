@@ -138,8 +138,11 @@
   width: 100%;
   height: 60px;
   border-bottom: 1px solid lightgrey;
+  justify-content: space-between;
 }
-
+.prova  {
+  display: flex;
+}
 .avatar {
   width: 12%;
   border-radius: 50%;
@@ -159,7 +162,10 @@
 .friend:active {
   background-color: #E9EBEB;
 }
-
+.last-time {
+padding: 15px;
+font-size: 12px;
+}
  /* RIGHT SIDE OF THE APP  */
  /* HEADER */
  .friend-chat{
