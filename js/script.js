@@ -64,11 +64,17 @@ if (minutes < 10) {
 // FUNCTION SEARCH
 
   $("#search").on("keyup", function() {
-    var name = $(".name")
-    var search = $("#search").val();
-    if(nome.includes(search)) {
-          $(this).show();
-        } else {
-          $(this).hide();
-        }
-  });
+    var search = $(this).val().toLowerCase();
+
+    $("#friend").each(function() {
+      var contact = $(this).find('.name').text().toLowerCase();
+
+      if (contact.includes(search)) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    }
+  );
+  }
+);
