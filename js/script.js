@@ -64,10 +64,10 @@ if (minutes < 10) {
 // FUNCTION SEARCH
 
   $("#search").on("keyup", function() {
-    var search = $(this).val().toLowerCase();
+    var search = $(this).val().toLowerCase().trim();
 
     $("#friend").each(function() {
-      var contact = $(this).find('.name').text().toLowerCase();
+      var contact = $(this).find('p').text().toLowerCase();
 
       if (contact.includes(search)) {
         $(this).show();
@@ -78,3 +78,17 @@ if (minutes < 10) {
   );
   }
 );
+// var friends = $("#my-friends");
+//
+// $("#search").keyup(function(){
+//   var textSearch = $('#search').val().toLowerCase().trim();
+//   friends.children().hide();
+//
+//   $(".friend").each(function() {
+//     var userName = $(this).find(".name").text().toLowerCase();
+//
+//     if ( userName.includes(textSearch) ){
+//     $(this).show();
+//     }
+//   })
+// })
