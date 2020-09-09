@@ -4,6 +4,7 @@ $(document).ready(function() {
     function(event) {
       if (event.which == 13) {
         sendMessage();
+        answer();
       }
     }
   );
@@ -20,6 +21,7 @@ $(document).ready(function() {
   $("#paper-plane").click(
     function() {
       sendMessage();
+      answer();
     }
   );
 
@@ -30,23 +32,39 @@ $(document).ready(function() {
 //FUNCTION SEND MESSAGE
 function sendMessage() {
 var inputValue = $("#send").val();
-
 if (inputValue != "") {
  var newMessage = $(".template .clone").clone();
 
- var date = new Date();
- var hours = date.getHours();
- var minutes = date.getMinutes();
 
- if (minutes < 10) {
-   var time = hours + ":0" + minutes;
- } else {
-   var time = hours + ":" + minutes;
- }
 
   newMessage.children(".b-green").prepend(inputValue);
   newMessage.find(".b-green .time").text(time);
   $(".chat").append(newMessage);
   $("#send").val("");
  }
+
+}
+
+
+//FUNCTION ANSWER
+function answer() {
+  setTimeout(function(){
+    var answer = $(".template-answer .clone").clone();
+    answer.children(".b-white").prepend("ok");
+    answer.find(".b-white .time").text(time);
+    $(".chat").append(answer);
+
+  }, 1000);
+}
+
+
+//FUNCTION GET TIME
+var date = new Date();
+var hours = date.getHours();
+var minutes = date.getMinutes();
+
+if (minutes < 10) {
+  var time = hours + ":0" + minutes;
+} else {
+  var time = hours + ":" + minutes;
 }
