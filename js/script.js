@@ -61,11 +61,14 @@ if (minutes < 10) {
   var time = hours + ":" + minutes;
 }
 
-//FUNCTION FILTERS
+// FUNCTION SEARCH
 
   $("#search").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#my-friends friend").filter(function() {
-      $(this).find("#friend").toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
+    var name = $(".name")
+    var search = $("#search").val();
+    if(nome.includes(search)) {
+          $(this).show();
+        } else {
+          $(this).hide();
+        }
   });
