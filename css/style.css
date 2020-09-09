@@ -131,7 +131,7 @@
 /* LEFT SIDE LIST FRIENDS SECTION  */
 .list-friends {
   overflow-y: scroll;
-  height: calc(100vh - 204px );
+  height: calc(100% - 156px );
 }
 .friend {
   display: flex;
@@ -198,7 +198,7 @@ header {
 /* MAIN */
 main {
   width: 100%;
-  height: calc(100vh - 168px );
+  height: calc(100% - 120px );
   overflow-y: scroll;
 }
 .bubble {
@@ -217,7 +217,7 @@ main {
   color: black;
   font-size: 12px;
   margin-right: 70px;
-  
+
 }
 .b-white {
   background-color: white;
