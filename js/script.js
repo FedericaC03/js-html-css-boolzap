@@ -125,13 +125,18 @@ deleteBubble();
 
 $('.friend').click(function () {
     var valueContact = $(this).data();
-
+    valueContact = $(this).index();
     var valueChat = $(".chat-conversation").data();
+    valueChat = $(".chat-conversation").index();
 
-console.log(valueChat);
-// if (valueContact == valueChat) {
-//   console.log(this);
-// } else {
-//   alert();
-// }
+    $(".chat-conversation").removeClass("active");
+    $(".friend").removeClass("active");
+
+    $(this).addClass("active");
+
+if (valueContact == valueChat) {
+    $(".chat-conversation").show();
+} else {
+  alert();
+}
 });
