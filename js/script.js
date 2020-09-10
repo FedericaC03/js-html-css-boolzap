@@ -36,7 +36,7 @@ if (inputValue != "") {
   $(".chat").append(newMessage);
   $("#send").val("");
   answer();
-  angleDown()
+  angleDown();
  }
 }
 
@@ -47,7 +47,7 @@ function answer() {
     answer.children(".b-white").prepend("ok");
     answer.find(".b-white .time").text(time);
     $(".chat").append(answer);
-    angleDown()
+    angleDown();
   }, 1000);
 }
 
@@ -81,6 +81,7 @@ $("#search").keyup(function(){
 
 // FUNCTION ANGLEDOWN
 function angleDown() {
+
   $(".bubble .b-green").hover(
     function () {
       $(this).find(".fa-angle-down").toggle();
@@ -94,3 +95,12 @@ function angleDown() {
   );
 }
 angleDown();
+
+
+//FUNCTION CLICK ANGLEDOWN, WINDOW APPEAR
+
+$(".fa-angle-down").click(
+  function() {
+      $(this).next().toggle();
+    }
+);
