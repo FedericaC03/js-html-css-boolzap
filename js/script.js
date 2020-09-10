@@ -4,7 +4,6 @@ $(document).ready(function() {
     function(event) {
       if (event.which == 13) {
         sendMessage();
-        answer();
       }
     }
   );
@@ -21,7 +20,6 @@ $(document).ready(function() {
   $("#paper-plane").click(
     function() {
       sendMessage();
-      answer();
     }
   );
 
@@ -37,6 +35,8 @@ if (inputValue != "") {
   newMessage.find(".b-green .time").text(time);
   $(".chat").append(newMessage);
   $("#send").val("");
+  answer();
+  angleDown()
  }
 }
 
@@ -47,6 +47,7 @@ function answer() {
     answer.children(".b-white").prepend("ok");
     answer.find(".b-white .time").text(time);
     $(".chat").append(answer);
+    angleDown()
   }, 1000);
 }
 
@@ -61,34 +62,35 @@ if (minutes < 10) {
   var time = hours + ":" + minutes;
 }
 
-// FUNCTION SEARCH
 
-  $("#search").on("keyup", function() {
-    var search = $(this).val().toLowerCase().trim();
+// FUNCTION SEARCH FRIENDS
+var friends = $("#my-friends");
 
-    $("#friend").each(function() {
-      var contact = $(this).find('p').text().toLowerCase();
+$("#search").keyup(function(){
+  var textSearch = $('#search').val().toLowerCase().trim();
+  friends.children().hide();
 
-      if (contact.includes(search)) {
-        $(this).show();
-      } else {
-        $(this).hide();
-      }
+  $(".friend").each(function() {
+    var userName = $(this).find(".name").text().toLowerCase();
+
+    if ( userName.includes(textSearch) ){
+    $(this).show();
     }
+  })
+})
+
+// FUNCTION ANGLEDOWN
+function angleDown() {
+  $(".bubble .b-green").hover(
+    function () {
+      $(this).find(".fa-angle-down").toggle();
+      }
   );
-  }
-);
-// var friends = $("#my-friends");
-//
-// $("#search").keyup(function(){
-//   var textSearch = $('#search').val().toLowerCase().trim();
-//   friends.children().hide();
-//
-//   $(".friend").each(function() {
-//     var userName = $(this).find(".name").text().toLowerCase();
-//
-//     if ( userName.includes(textSearch) ){
-//     $(this).show();
-//     }
-//   })
-// })
+
+  $(".bubble .b-white").hover(
+    function () {
+      $(this).find(".fa-angle-down").toggle();
+      }
+  );
+}
+angleDown();
