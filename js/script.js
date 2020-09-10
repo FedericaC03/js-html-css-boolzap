@@ -37,6 +37,8 @@ if (inputValue != "") {
   $("#send").val("");
   answer();
   angleDown();
+  finestra();
+  deleteBubble();
  }
 }
 
@@ -48,6 +50,8 @@ function answer() {
     answer.find(".b-white .time").text(time);
     $(".chat").append(answer);
     angleDown();
+    finestra();
+    deleteBubble();
   }, 1000);
 }
 
@@ -96,11 +100,22 @@ function angleDown() {
 }
 angleDown();
 
-
 //FUNCTION CLICK ANGLEDOWN, WINDOW APPEAR
+function finestra() {
+  $(".fa-angle-down").click(
+    function() {
+        $(this).next().toggle();
+      }
+  );
+}
+finestra();
 
-$(".fa-angle-down").click(
-  function() {
-      $(this).next().toggle();
-    }
-);
+ //DELETE FUNCTION
+ function deleteBubble() {
+   $(".delete").click(
+     function() {
+         $(this).parents(".bubble").hide();
+       }
+   );
+ }
+deleteBubble();
