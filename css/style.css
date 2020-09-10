@@ -147,6 +147,7 @@
   width: 12%;
   border-radius: 50%;
   margin: 5px 15px;
+  height: 70%;
 }
 
 .friend p {
@@ -180,17 +181,13 @@ font-size: 12px;
    height: 70%;
    margin: 10px;
  }
- .friend-chat p {
+ #nameActive {
    color:black;
    margin-top: 15px;
    font-size: 14px;
    font-weight: bold;
  }
 
- .friend-chat span {
-  font-size: 10px;
-  font-weight: bold;
- }
 header {
   display: flex;
   background-color: #EAEAEA;
@@ -206,6 +203,7 @@ main {
   width: 100%;
   height: calc(100% - 120px );
   overflow-y: scroll;
+  padding-top: 30px;
 }
 .chat-conversation {
   display: none;
@@ -218,9 +216,6 @@ main {
   height: 50px;
 }
 
-.first {
-  margin-top: 30px;
-}
 .b-green, .b-white {
   background-color: #D5F9BA;
   text-align: right;

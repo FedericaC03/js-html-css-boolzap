@@ -33,7 +33,7 @@ if (inputValue != "") {
 
   newMessage.children(".b-green").prepend(inputValue);
   newMessage.find(".b-green .time").text(time);
-  $(".chat").append(newMessage);
+  $(".chat-conversation.active").append(newMessage);
   $("#send").val("");
   answer();
   angleDown();
@@ -48,7 +48,7 @@ function answer() {
     var answer = $(".template-answer .clone").clone();
     answer.children(".b-white").prepend("ok");
     answer.find(".b-white .time").text(time);
-    $(".chat").append(answer);
+    $(".chat-conversation.active").append(answer);
     angleDown();
     finestra();
     deleteBubble();
@@ -122,21 +122,36 @@ deleteBubble();
 
 // $('.chat').animate({scrollTop:$(document).height()}, 'slow');
 
+//FUNCTION SWITCH CHAT
+function chat() {
+  $('.friend').click(function () {
+      var valueContact = $(this).data();
+      valueContact = $(this).index();
+      var valueChat = $(".chat-conversation[data-conversation="+valueContact+"]").data();
+      valueChat = $(".chat-conversation[data-conversation="+valueContact+"]").index();
 
-$('.friend').click(function () {
-    var valueContact = $(this).data();
-    valueContact = $(this).index();
-    var valueChat = $(".chat-conversation").data();
-    valueChat = $(".chat-conversation").index();
+      $(".friend").removeClass("active");
+      $(this).addClass("active");
 
-    $(".chat-conversation").removeClass("active");
-    $(".friend").removeClass("active");
+      $(".chat-conversation").removeClass("active");
+      $("[data-conversation=" + valueChat + "]").addClass("active");
 
-    $(this).addClass("active");
+      //REPLACE NAME ACTIVE
+      var textName = $(this).find(".name").text();
+      var nameFriend = $("#nameActive").text(textName);
 
-if (valueContact == valueChat) {
-    $(".chat-conversation").show();
-} else {
-  alert();
+      //REPLACE IMG ACTIVE
+      var imgActive = $(".friend-chat img");
+      var imgFriend = $(this).find(".avatar").clone();
+      imgActive.replaceWith(imgFriend);
+  });
 }
-});
+chat();
+// $(document).click(
+//   function() {
+//     $("#microphone").hide();
+//     $("#paper-plane").show();
+//     $(".window").hide();
+//
+//   }
+// );
