@@ -119,3 +119,19 @@ finestra();
    );
  }
 deleteBubble();
+
+// $('.chat').animate({scrollTop:$(document).height()}, 'slow');
+
+
+$('.friend').click(function () {
+    var valueContact = $(this).data();
+
+    var valueChat = $(".chat-conversation").data();
+
+console.log(valueChat);
+// if (valueContact == valueChat) {
+//   console.log(this);
+// } else {
+//   alert();
+// }
+});

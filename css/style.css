@@ -159,7 +159,7 @@
 .friend p span {
   font-size: 10px;
 }
-.friend:active {
+.friend.active {
   background-color: #E9EBEB;
 }
 .last-time {
@@ -207,11 +207,17 @@ main {
   height: calc(100% - 120px );
   overflow-y: scroll;
 }
+.chat-conversation {
+  display: none;
+}
+.chat-conversation.active {
+  display: block;
+}
 .bubble {
   width: 100%;
   height: 50px;
-
 }
+
 .first {
   margin-top: 30px;
 }
