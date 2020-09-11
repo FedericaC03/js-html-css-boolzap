@@ -39,6 +39,7 @@ if (inputValue != "") {
   angleDown();
   finestra();
   deleteBubble();
+  $(".friend-chat h6").text("sta scrivendo...");
  }
 }
 
@@ -52,6 +53,9 @@ function answer() {
     angleDown();
     finestra();
     deleteBubble();
+    $('.chat').animate({scrollTop:$(".chat").height()}, 'slow');
+    $(".friend-chat h6").text("Ultimo accesso oggi alle " + time);
+    $(".friend.active .last-time").text(time);
   }, 1000);
 }
 
@@ -65,7 +69,6 @@ if (minutes < 10) {
 } else {
   var time = hours + ":" + minutes;
 }
-
 
 // FUNCTION SEARCH FRIENDS
 var friends = $("#my-friends");
@@ -120,7 +123,6 @@ finestra();
  }
 deleteBubble();
 
-// $('.chat').animate({scrollTop:$(document).height()}, 'slow');
 
 //FUNCTION SWITCH CHAT
 function chat() {
@@ -147,11 +149,3 @@ function chat() {
   });
 }
 chat();
-// $(document).click(
-//   function() {
-//     $("#microphone").hide();
-//     $("#paper-plane").show();
-//     $(".window").hide();
-//
-//   }
-// );
