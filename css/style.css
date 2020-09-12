@@ -57,10 +57,11 @@
   display: flex;
   justify-content: space-between;
   background-color: #EAEAEA;
+  border-right: 1px solid  #B0B0B0;
 }
 
 .my-profile img{
-  width: 10%;
+  width: 11%;
   border-radius: 50%;
   margin: 8px;
 }
@@ -110,6 +111,7 @@
   display: flex;
   width: 100%;
   justify-content: center;
+  align-items: center;
 }
 
 .new-chat input {
@@ -119,12 +121,17 @@
   margin-left: 35px;
   border: none;
 }
+.new-chat form {
+  width: 99%;
+  border: 1px solid #EAEAEA;
+  height: 95%;
+}
 
 .new-chat i {
   vertical-align: middle;
   line-height: 35px;
   font-size: 12px;
-  margin-left: 10px;
+  margin-left: 25px;
 }
 
 ::placeholder {
@@ -153,7 +160,7 @@
   width: 12%;
   border-radius: 50%;
   margin: 5px 15px;
-  height: 70%;
+  height: 66%;
 }
 
 .friend p {
@@ -184,9 +191,9 @@ font-size: 12px;
  }
 
  .friend-chat img {
-   width: 6%;
+   max-width: 6%;
    border-radius: 50%;
-   height: 70%;
+   height: 67%;
    margin: 10px;
  }
 
@@ -263,15 +270,17 @@ main .time {
 }
 
 .window {
-  width: 130px;
-  height: 50px;
+  width: 120px;
+  height: 70px;
   position: absolute;
   top: 45px;
   right: 0px;
   z-index: 3;
-  box-shadow: 10px 10px 8px #888888;
+  box-shadow: 2px 2px 2px lightgrey;
   background-color: white;
   display: none;
+  white-space: nowrap;
+  padding-top: 5px;
 }
 
 .window p {

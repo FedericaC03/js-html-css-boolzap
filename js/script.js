@@ -22,7 +22,6 @@ $(document).ready(function() {
       sendMessage();
     }
   );
-
 });
 
 //FUNCTION SEND MESSAGE
