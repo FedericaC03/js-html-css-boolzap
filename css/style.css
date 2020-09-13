@@ -333,3 +333,29 @@ footer input::placeholder {
 /* .chat .bubble-green:hover .fa-angle-down {
   display: block;
 } */
+
+/* RESPONSIVE */
+@media screen and (max-width: 1375px) {
+  .input-chat {
+    width: 150px;
+    text-align: center;
+  }
+  .new-chat input {
+    position: absolute;
+    max-width: 50%;
+  }
+
+  .new-chat {
+    position: relative;
+  }
+  img {
+    max-width: 100%;
+  }
+  .notifications {
+    position: relative;
+  }
+  .notifications p {
+    position: absolute;
+    margin-left: 65px;
+  }
+}

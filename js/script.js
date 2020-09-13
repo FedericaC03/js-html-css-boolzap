@@ -122,7 +122,6 @@ finestra();
  }
 deleteBubble();
 
-
 //FUNCTION SWITCH CHAT
 function chat() {
   $('.friend').click(function () {
@@ -148,3 +147,11 @@ function chat() {
   });
 }
 chat();
+
+
+
+// $(document).click (function myFunction(event) {
+//   event.stopImmediatePropagation(
+//     $(".window").hide());
+// }
+// );
